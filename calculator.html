@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Calculator</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<header class="header">
+		<nav class="navbar">
+			<div class="link-wrapper">
+				<a href="/" class="nav-logo">Home</a>
+			</div>
+			<ul class="nav-menu">
+				<li class="nav-item">
+					<div class="link-wrapper">
+						<a href="/calculator.html" class="nav-link">Calculator</a>
+					</div>
+				</li>
+				<li class="nav-item">
+					<div class="link-wrapper">
+						<a href="/ways.html" class="nav-link">Ways</a>
+					</div>
+				</li>
+				<li class="nav-item">
+					<div class="link-wrapper">
+						<a href="/programmers.html" class="nav-link">Programmers</a>
+					</div>
+				</li>
+			</ul>
+			<div class="hamburger">
+				<span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+  <div class="landing">
+    <br><br>
+    <h1><span class="color-it-without-hover">calculate</span> your carbon emissions</h1>
+    <br><br>
+    <br><br>
+  </div>
+  <div class="flex-container color-container">
+    <section class="col-2">
+      <h1><span class="color-it-without-hover">Calculate</span></h1>
+      <br><br><br>
+      <div id="form" class="center2">
+        <h2>How many members in your household?</h2><br>
+        <input type="number" min="0" placeholder="Number of members" id="i10"><br><br>
+        <h2>Size of your house?</h2><br>
+        <select id="i9">
+          <option value="10">Large</option>  
+          <option value="7">Medium</option>  
+          <option value="4">Small</option>  
+          <option value="2">Apartment</option>  
+        </select><br><br>
+        <h2>Your food choices?</h2><br>
+        <select id="i8">
+          <option value="10">Meat on daily basis</option>  
+          <option value="8">Meat few times a week</option>  
+          <option value="4">Vegetarian</option>  
+          <option value="2">Vegan</option>  
+        </select><br><br>
+        <h2>You use dishwasher or washing machine?</h2><br>
+        <select id="i7">
+          <option value="3">> 9 times per week</option>  
+          <option value="2">4 to 9 times per week</option>  
+          <option value="1">1 to 3 times per week</option>  
+          <option value="0">I don't have any</option>  
+        </select><br><br>
+        <h2>How many household purchases you make each year?</h2><br>
+        <select id="i6">
+          <option value="10">> 7 new things per year</option>  
+          <option value="8">5 to 7 times per week</option>  
+          <option value="6">3 to 5 times per week</option>  
+          <option value="4">&lt; 3</option>  
+          <option value="2">Almost nothing</option> 
+        </select><br><br>
+        <h2>How much waste you produce each week? (Number of garbage cans)</h2><br>
+        <input id="i5" type="number" min="0" placeholder="Number of garbage cans"><br><br>
+        <h2>Do you recycle things?</h2><br>
+        <input id="i4" type="text" placeholder="Type yes for yes and no for no"><br><br>
+        <h2>Transportation</h2><br>
+        <p>How many miles do you travel with your personal vehicle?</p><input id="i3" type="number" placeholder="Number of miles"><br>
+        <p>How many miles do you travel on public transport?</p><input id="i2" type="number" placeholder="Number of miles"><br>
+        <p>How much do you travel on flights?</p>
+        <select id="i1">
+          <option value="2">Short distances in 1 year</option>
+          <option value="6">Further distances</option>
+          <option value="20">Travel far, such as to another continent</option>
+          </select><br>
+        <br><br>
+        <a href="#res"><button onclick="calculate();">Calculate</button></a>
+      </div>
+    </section>
+  </div>
+  <br><br><br>
+  <div class="flex-container">
+    <section class="col-2">
+      <h1><span class="color-it-without-hover">Result</span></h1>
+      <br><br>
+      <p id="res"></p>
+    </section>
+  </div>
+  <br><br>
+    <script src="script.js"></script>
+    <script>
+function calculate() {
+  const i10 = document.getElementById("i10").value;
+  const i9 = document.getElementById("i9").value;
+  const i8 = document.getElementById("i8").value;
+  const i7 = document.getElementById("i7").value;
+  const i6 = document.getElementById("i6").value;
+  const i5 = document.getElementById("i5").value;
+  const i4 = document.getElementById("i4").value;
+  const i3 = document.getElementById("i3").value;
+  const i2 = document.getElementById("i2").value;
+  const i1 = document.getElementById("i1").value;
+  let points = 0;
+  let p2 = 0;
+  let p3 = 0;
+  let p4 = 0;
+  let p5 = 0;
+  let p6 = 0;
+  let p7 = 0;
+  let p8 = 0;
+  let p9 = 0;
+  let p10 = 0;
+  if(i10 === "1") {
+    points += 14;
+  }
+  else if(i10 === "2") {
+    points += 12;
+  }
+  else if(i10 === "3") {
+    points += 10;
+  }
+  else if(i10 === "4") {
+    points += 8;
+  }
+  else if(i10 === "5") {
+    points += 6;
+  }
+  else if(parseInt(i10) === 6) {
+    points += 4;
+  }
+  else if(parseInt(i10) > 6) {
+    points += 2;
+  }
+  if(i9 === "10") {
+    p2 += 10;
+  }
+  else if(i9 === "7") {
+    p2 += 7;
+  }
+  else if(i9 === "4") {
+    p2 += 4;
+  }
+  else if(i9 === "2") {
+    p2 += 2;
+  }
+  if(i8 === "10") {
+    p3 += 10;
+  }
+  else if(i8 === "8") {
+    p3 += 8;
+  }
+  else if(i8 === "4") {
+    p3 += 4;
+  }
+  else if(i8 === "2") {
+    p3 += 2;
+  }
+  if(i7 === "3") {
+    p4 += 3;
+  }
+  else if(i7 === "2") {
+    p4 += 2;
+  }
+  else if(i7 === "1") {
+    p4 += 1;
+  }
+  else if(i7 === "0") {
+    p4 += 0;
+  }
+  if(i6 === "10") {
+    p5 += 10;
+  }
+  else if(i6 === "8") {
+    p5 += 8;
+  }
+  else if(i6 === "6") {
+    p5 += 6;
+  }
+  else if(i6 === "4") {
+    p5 += 4;
+  }
+  else if(i6 === "2") {
+    p5 += 2;
+  }
+  if(i5 === "4") {
+    p6 += 50;
+  }
+  else if(i5 === "3") {
+    p6 += 40;
+  }
+  else if(i5 === "2") {
+    p6 += 30;
+  }
+  else if(i5 === "1") {
+    p6 += 20;
+  }
+  else if(i5 === "0") {
+    p6 += 5;
+  }
+  if(i4 === "yes") {
+    p7 += 0;
+  }
+  else if(i4 === "no") {
+    p7 += 24;
+  }
+  if(i3 >= "15000") {
+    p8 += 12;
+  }
+  else if(i3 < "15000" && i3 >= "10000") {
+    p8 += 10;
+  }
+  else if(i3 >= "1000" && i3 < "10000") {
+    p8 += 6;
+  }
+  else if(i3 < "1000") {
+    p8 += 4;
+  }
+  else if(i3 === "0") {
+    p8 += 0;
+  }
+  if(i2 >= "20000") {
+    p9 += 12;
+  }
+  else if(i2 < "20000" && i2 >= "15000") {
+    p9 += 10;
+  }
+  else if(i2 >= "10000" && i2 < "15000") {
+    p9 += 6;
+  }
+  else if(i2 >= "1000" && i2 < "10000") {
+    p9 += 4;
+  }
+  else if(i2 < "1000") {
+    p9 += 2;
+  }
+  else if(i2 === "0") {
+    p9 += 0;
+  }
+  if(i1 === "2") {
+    p10 += 2;
+  }
+  else if(i1 === "6") {
+    p10 += 6;
+  }
+  else if(i1 === "10") {
+    p10 += 10;
+  }
+   let total = points + p2 + p3 + p4 + p5 + p6 + p7 + p8 + p9 + p10;
+
+  if(total <= 20) {
+    document.getElementById("res").innerHTML = `<p class="green">Hurrah! Your carbon footprint is very low. Mother nature is proude of you :)</p><br>
+    <p class="green">Plant more trees and try out ways listed in this website</p>`;
+  }
+  else if(total <= 60 && total > 20) {
+    document.getElementById("res").innerHTML = `<p class="green">Cool! You are making a small impact on our planet. Keep it up!</p><br>
+    <p class="green">Plant more trees and try out ways listed in this website</p>`;
+  }
+  else if(total >= 80 && total <= 100) {
+    document.getElementById("res").innerHTML = `<p class="red">Uh oh! Your carbon footprint is not good. You should look out for ways on the Ways tab. I hope you will do good for the environment.</p><br>
+    <p class="red">Plant more trees and try out ways listed in this website</p>`;
+  }
+  else if(total > 100) {
+    document.getElementById("res").innerHTML = `<p class="red">Oh no! Your carbon footprint is was too much. You should definitely try some ways to keep it as low as possible. Try out as many ways as possible.</p><br>
+    <p class="red">Plant more trees and try out ways listed in this website</p>`;
+  }
+}
+    </script>
+  </body>
+</html>
