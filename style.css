@@ -206,11 +206,11 @@ p a {
   padding: 15px;
   outline: none;
   font-size: 1.1em;
-  font-family: 'Epliogue';
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 #form select {
   height: 30px;
-  font-family: 'Epliogue';
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1.1em;
 }
 #form button {
