@@ -37,7 +37,7 @@ h1 {
   text-align: center;
   font-size: 3em;
   padding: 40px;
-  border-radius: 74% 26% 80% 20% / 17% 73% 27% 83% ;
+  border-radius: 20px;
 }
 .green {
   background-color: green;
@@ -215,10 +215,10 @@ p a {
 }
 #form button {
   border-radius: 20px;
-  padding: 30px;
-  border: none;
+  padding: 25px;
+  border: 2px solid #6C8C74;
   outline: none;
-  font-size: 1.4em;
+  font-size: 1.3em;
   cursor: pointer;
   transition: .5s;
 }
