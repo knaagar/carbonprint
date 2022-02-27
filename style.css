@@ -262,15 +262,14 @@ a.four:hover {
   flex: 2;
 }
 @media screen and (max-width: 700px) {
-	.flex-container {
-		-webkit-flex-direction: column;
-    flex-direction: column;
-	}
+  .flex-container {
+     -webkit-flex-direction: column;
+     flex-direction: column;
+ }
 }
 .color-container {
   background-color: #F2CA99;
   padding: 40px 20px 40px 20px;
-  
 }
 img {
   max-width: 100%;
