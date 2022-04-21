@@ -8,7 +8,7 @@ This site has very low carbon emissions. I tried to create a site which is both 
 What have I done to make this site green?
 1. I have used no images (not even a favicon) because images are a lot of data.
 2. The whole file size is 28 kB.
-3. No server (because was not requires).
+3. No server (because was not required).
 4. Tried to use less JS.
 5. Used only one custom font and used web safe fonts.
 6. Clean code
